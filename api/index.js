@@ -24,18 +24,18 @@ const { User, CartProduct } = require("./src/db");
 const loadData = require("./src/Controller/Utils/load_data");
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
-  server.listen(3001, async () => {
-    loadData();
+conn.sync({ force: false }).then(() => {
+  server.listen(process.env.REACT_APP_PORT?process.env.REACT_APP_PORT:3001, async () => {
+    /* loadData(); */
     //------testCart--------
-    await User.create({
+    /* await User.create({
       userName: "nachito",
       firstName: "Ignacio",
       lastName: "Funes",
       email: "emanuelFun.95@gmail.com",
       password: "12345alt64",
       adminPrivileges: true,
-    });
+    }); */
 
     console.log("%s listening at 3001"); // eslint-disable-line no-console
   });

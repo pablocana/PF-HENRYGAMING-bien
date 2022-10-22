@@ -7,6 +7,10 @@ import { store } from "./redux/store";
 import { BrowserRouter } from "react-router-dom";
 import styles from "./index.css";
 import bootstrap from "bootstrap/dist/css/bootstrap.css";
+import axios from "axios";
+/* import dotenv from "dotenv";
+dotenv.config() */
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
